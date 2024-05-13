@@ -1,11 +1,13 @@
-const h1 = document.querySelector("div.hello:first-child h1");
+const loginform = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form input");
 
 
-function handletitleclick() {
-     if (h1.style.color === "blue"){ 
-          h1.style.color = "tomato";
-     }
-     else 
-     h1.style.color = "blue"
+function LoginSubmit(tomato)
+{
+    tomato.preventDefault();        
+    console.log(tomato);
 }
-h1.addEventListener("click", handletitleclick);
+
+
+
+loginform.addEventListener("submit", LoginSubmit);
